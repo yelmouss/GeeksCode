@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { React, useEffect, useState } from "react";
+// import Alert from 'react-bootstrap/Alert';
+import Header from "./components/layout/navbar";
+import Home from "./components/home";
 
 function App() {
+
+  const [dark, updateDark] = useState(null);
+  const ModeDark = JSON.parse(localStorage.getItem("dark"));
+
+  useEffect(()=>{
+    if(ModeDark){
+      updateDark(ModeDark)
+    }
+  },[ModeDark])
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Header dark={dark} updateDark={updateDark} />
+
+     <Home dark={dark} updateDark={updateDark} />
     </div>
   );
 }
