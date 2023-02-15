@@ -4,25 +4,25 @@ import { React, useEffect, useState } from "react";
 // import Alert from 'react-bootstrap/Alert';
 import Header from "./components/layout/navbar";
 import Home from "./components/home";
-
+import Footer from "./components/layout/footer";
 function App() {
-
   const [dark, updateDark] = useState(null);
   const ModeDark = JSON.parse(localStorage.getItem("dark"));
 
-  useEffect(()=>{
-    if(ModeDark){
-      updateDark(ModeDark)
+  useEffect(() => {
+    if (ModeDark) {
+      updateDark(ModeDark);
     }
-  },[ModeDark])
-
+  }, [ModeDark]);
 
   return (
-    <div className="App">
-     <Header dark={dark} updateDark={updateDark} />
-
-     <Home dark={dark} updateDark={updateDark} />
-    </div>
+    <>
+      <div className={`App d-flex flex-column min-vh-100 ${dark ? "bg-light" : "bg-dark"}` }>
+        <Header dark={dark} updateDark={updateDark} />
+        <Home dark={dark} updateDark={updateDark} />      
+        <Footer /> 
+      </div>   
+    </>
   );
 }
 

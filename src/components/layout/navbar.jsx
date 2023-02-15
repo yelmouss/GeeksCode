@@ -4,10 +4,11 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AiFillBell } from "react-icons/ai";
 import { BiMessageDetail } from "react-icons/bi";
 import { BsFillSunFill, BsMoonStarsFill } from "react-icons/bs";
+
+
 function Header({ dark, updateDark }) {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
