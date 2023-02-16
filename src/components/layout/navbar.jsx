@@ -12,7 +12,7 @@ import { BsFillSunFill, BsMoonStarsFill } from "react-icons/bs";
 function Header({ dark, updateDark }) {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container>
+      <Container fluid>
         <Navbar.Brand href="#home">
           <img
             alt=""

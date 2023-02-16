@@ -3,7 +3,7 @@ import "./App.css";
 import { React, useEffect, useState } from "react";
 // import Alert from 'react-bootstrap/Alert';
 import Header from "./components/layout/navbar";
-import Home from "./components/home";
+import Home from "./components/Home";
 import Footer from "./components/layout/footer";
 function App() {
   const [dark, updateDark] = useState(null);
