@@ -5,8 +5,9 @@ function Footer({ dark, updateDark }) {
     <>
       <footer className="footer mt-auto py-3">
         <div className="container">
-          <span className="text-muted">Place sticky footer content here.</span>
+          <span className="text-muted">Powered by Geeks - {new Date().getFullYear()} Copyright © </span>
         </div>
+
       </footer>
     </>
   );
